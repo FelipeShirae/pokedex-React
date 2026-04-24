@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import{ PokemonProvider } from './contexts/PokemonContext';
 import SearchBar from './components/SearchBar'
+import PokemonCard from './components/PokemonCard';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <PokemonProvider>
       <h1>Pokedex React</h1>
       <SearchBar />
+      <PokemonCard />
     </PokemonProvider>
       
   )
