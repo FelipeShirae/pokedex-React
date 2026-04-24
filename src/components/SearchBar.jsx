@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { TextField, Button } from "@mui/material";
+import { TextField, Button, Box } from "@mui/material";
 import { PokemonContext } from "../contexts/PokemonContext";
 
 export default function SearchBar() {
@@ -8,11 +8,10 @@ export default function SearchBar() {
 
   const handleBuscar = () => {
     buscarPokemon(nome.toLowerCase());
-    
   };
 
   return (
-    <div>
+    <Box display="flex" gap={2} justifyContent="center" mb={2}>
       <TextField
         label="Nome do Pokémon"
         value={nome}
@@ -21,8 +20,9 @@ export default function SearchBar() {
       <Button variant="contained" onClick={handleBuscar}>
         Buscar
       </Button>
-    </div>
-
+    </Box>
   );
 
+
+  
 }
